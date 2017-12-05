@@ -1,0 +1,60 @@
+# GUIDE
+
+# The first time that you run this app, and anytime you change the gemfile, run `docker-compose up --build`
+# To stop the services press `control + c`
+# Pull down the containers with `docker-compose down` (To remove the volumes add `-v` and to remove the images add `--rmi local`)
+# Start up the containers again with `docker-compose up`
+# The first time you run the containers run `docker-compose exec web rails db:create db:migrate` to create the database and setup the schema
+
+
+# Run tests with `docker-compose run -e "RAILS_ENV=test" web rails test
+
+version: '3'
+
+services:
+  chrome:
+    image: selenium/standalone-chrome-debug
+    volumes:
+      - /dev/shm:/dev/shm
+  web:
+    image: custom-ruby
+    build: .
+    ports:
+      - '3000:3000'
+    # To run the rails server in dev, include the command below (this also clears the tmp so the pid session is destroyed)
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - '.:/app'
+    links:
+      - postgres
+      - redis
+    depends_on:
+      - chrome
+    env_file:
+      - '.env'
+
+  webpacker:
+    build: .
+    command: bash -c "rm -rf /app/public/packs; /app/bin/webpack-dev-server"
+    volumes:
+      - .:/app
+    ports:
+      - "3035:3035"
+
+  postgres:
+    image: 'postgres:10.0'
+    env_file:
+      - '.env'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+
+  redis:
+    image: 'redis:4.0.6'
+    volumes:
+      - 'redis:/data'
+    # This command is not yet configured to take a password. This would require the `--requirepass yourpassword` option
+    command: redis-server
+
+volumes:
+  postgres:
+  redis:

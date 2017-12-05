@@ -1,0 +1,126 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/app/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/app/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/app/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/app/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/app/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/app/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/app/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/app/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/app/app/policies/application_policy.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1512456200
+  }
+}

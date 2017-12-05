@@ -1,0 +1,25 @@
+{
+  "name": "road-to-code",
+  "private": false,
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "axios": "^0.17.1",
+    "coffeescript": "1.12.7",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "vue": "^2.5.9",
+    "vue-axios": "^2.0.2",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.9",
+    "vue-turbolinks": "^2.0.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.5"
+  },
+  "version": "1.0.0",
+  "description": "A community application where people team up, solve challenges, build apps and become better developers",
+  "main": "index.js",
+  "repository": "https://github.com/StMacLennan/road-to-code.git",
+  "author": "Stephen MacLennan <milesmaclennan@gmail.com>",
+  "license": "MIT"
+}

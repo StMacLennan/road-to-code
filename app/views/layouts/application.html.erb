@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <title>Road to Code</title>
+    <%= csrf_meta_tags %>
+    <%= display_meta_tags site: 'Road to Code' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag    'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= google_tag_manager %>
+    <%= render 'shared/header' %>
+    <% flash.each do |alert, message| %>
+      <div class="<%= alert %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
+</html>

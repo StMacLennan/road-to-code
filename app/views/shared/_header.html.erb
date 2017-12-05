@@ -1,0 +1,61 @@
+<nav class="navbar is-transparent is-fixed-top">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+     <%#Your logo goes here %>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://bulma.io/">
+        Home
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <%= link_to "Something", "#", class: "navbar-item" %>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            Elements
+          </a>
+          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            Components
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Road to Code: Pair up, solve challenges, build cool shit and become a better developer&amp;hashtags=codepair, roadtocode&amp;url=http://roadtocode.io&amp;via=StMacLennan">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span>
+                Tweet
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <%= link_to "#", class:"button is-primary" do %>
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span>
+              <span>Register</span>
+              </a>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
