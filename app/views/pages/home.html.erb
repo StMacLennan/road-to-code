@@ -15,16 +15,9 @@
       </h3>
       <br>
       <br>
-      <%= link_to new_user_registration_path do %>
-        <p class="retro-link active">
-          Start game (Register)
-        <p>
-      <% end %> <br>
-      <%= link_to new_user_session_path do %>
-        <p class="retro-link">
-          <span class="">Continue (Log in)</span>
-        <p>
-      <% end %>
+      <%= link_to "Start (Register)", new_user_registration_path, id:"home-register-link", class: "retro-link is-active" %>
+      <br>
+      <%= link_to "Continue (Log in)", new_user_session_path, id:"home-login-link", class: "retro-link" %>
     </div>
   </div>
 </section>

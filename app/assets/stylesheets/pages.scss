@@ -11,27 +11,21 @@
 .retro-link {
   font-family: $family-primary;
   line-height: 2em;
+  color: $red !important;
 }
-.retro-link.active {
-  color: $red;
-	-webkit-animation-name: shaker;
-	-webkit-animation-duration: 0.8s;
-	-webkit-transform-origin:50% 50%;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-}
-.retro-link.active:after {
-  font-size: 1.5em;
-  content: "\f060";
-  font-family: FontAwesome;
-  //padding-right: 15px;
-}
-.retro-link.active:before {
+.retro-link:before {
   font-size: 1.5em;
   content: "\f061";
   font-family: FontAwesome;
-  //padding-right: 15px;
+  padding-right: 15px;
 }
+.retro-link:after {
+  font-size: 1.5em;
+  content: "\f060";
+  font-family: FontAwesome;
+  padding-left: 15px;
+}
+
 @-webkit-keyframes shaker {
 	0% { -webkit-transform: translate(-5px, 0px) rotate(0deg); }
 	25% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
