@@ -1,9 +1,41 @@
-// Include all standard formats used in your app. Eg: fonts, standard settings for h1, h2, p etc
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Press+Start+2P');
+
+//Setting font styles
+$family-primary: "Press Start 2P", cursive;
+$family-secondary: 'Open Sans', sans-serif;
+
+body, p, h4, h5 {
+  font-family: $family-secondary;
+}
+
+h1, h2, h3 {
+  font-family: $family-primary;
+}
 
 h1 {
-  font-size: 3em !important;
+  @extend .is-size-1;
 }
 
 h2 {
-  font-size: 2.5em !important;
+  @extend .is-size-2;
 }
+
+h3 {
+  @extend .is-size-3;
+}
+
+h4 {
+  @extend .is-size-4;
+}
+
+h5 {
+  @extend .is-size-5;
+}
+
+.footer {
+  color: $white;
+  background-color: $echo-color !important;
+}
+
+
+
