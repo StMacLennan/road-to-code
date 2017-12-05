@@ -3,11 +3,11 @@
 // Find the original Bulma variables here https://github.com/jgthms/bulma/blob/master/sass/utilities/initial-variables.sass
 
 // Brand colors
-/*$alpha-color: blue;*/
-//$beta-color: green;
-//$charlie-color: red;
-//$delta-color: yellow;
-/*$echo-color: purple;*/
+$alpha-color: #0FA3B1; // Cyan
+$beta-color: #5DD39E; // Green
+$charlie-color: #D05353; // Red
+$delta-color: #C9B79C; // Tan
+$echo-color: #4A4A48; // Mud grey
 
 // Overwrite generic colors
 /*$black: 	*/
@@ -31,14 +31,14 @@
 /*$red:*/
 
 //Set the main Bulma colors
-//$primary: $alpha-color;
-/*$link: $blue*/
-//$info: $cyan
-//$success: $green
+$primary: $alpha-color;
+$link: $alpha-color;
+$info: $delta-color;
+$success: $beta-color;
 //$warning: $yellow
-//$danger: $red
-//$dark: $grey-darker
-//$text: $grey-dark
+$danger: $charlie-color;
+$dark: $echo-color;
+$text: $echo-color;
 
 
 
