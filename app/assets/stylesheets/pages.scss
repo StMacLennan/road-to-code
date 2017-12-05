@@ -10,23 +10,33 @@
 
 .retro-link {
   font-family: $family-primary;
-  .is-active {
-    -webkit-animation: blink 1s steps(5, start) infinite;
-    -moz-animation:    blink 1s steps(5, start) infinite;
-    -o-animation:      blink 1s steps(5, start) infinite;
-    animation:         blink 1s steps(5, start) infinite;
-  }
+  line-height: 2em;
+}
+.retro-link.active {
+  color: $red;
+	-webkit-animation-name: shaker;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+.retro-link.active:after {
+  font-size: 1.5em;
+  content: "\f060";
+  font-family: FontAwesome;
+  //padding-right: 15px;
+}
+.retro-link.active:before {
+  font-size: 1.5em;
+  content: "\f061";
+  font-family: FontAwesome;
+  //padding-right: 15px;
+}
+@-webkit-keyframes shaker {
+	0% { -webkit-transform: translate(-5px, 0px) rotate(0deg); }
+	25% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	50% { -webkit-transform: translate(5px, 0px) rotate(0deg); }
+	75% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+	100% { -webkit-transform: translate(-5px, 0px) rotate(0deg); }
 }
 
-@-webkit-keyframes blink {
-  to { visibility: hidden; }
-}
-@-moz-keyframes blink {
-  to { visibility: hidden; }
-}
-@-o-keyframes blink {
-  to { visibility: hidden; }
-}
-@keyframes blink {
-  to { visibility: hidden; }
-}
