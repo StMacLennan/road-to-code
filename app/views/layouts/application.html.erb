@@ -16,7 +16,7 @@
     <%= google_tag_manager %>
     <%= render 'shared/header' %>
     <% flash.each do |alert, message| %>
-      <div class="<%= alert %>"><%= message %></div>
+      <div class="notification has-text-centered is-<%= alert %>"><%= message %></div>
     <% end %>
     <%= yield %>
     <%= render 'shared/footer' %>
