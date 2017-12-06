@@ -11,6 +11,7 @@
 .retro-link {
   font-family: $family-primary;
   line-height: 2em;
+  transition: all 0.5s ease;
 }
 
 .retro-link:hover{
@@ -21,10 +22,7 @@
   content: "\f061";
   font-family: FontAwesome;
   padding-right: 15px;
-  -webkit-animation: slide-left 0.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide-left 0.5s forwards;
-  animation-delay: 2s;
+  animation: all 0.5s ease;
 }
 .retro-link:hover:after {
   font-size: 1.5em;
@@ -39,7 +37,7 @@
 }
 
 
-@-webkit-keyframes slide-left {
+@-webkit-keyframes slideleft {
     100% { left: 0; }
 }
 
