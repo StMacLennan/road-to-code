@@ -12,23 +12,14 @@
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="https://bulma.io/">
-        Home
-      </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="/documentation/overview/start/">
-          Docs
+        <%= link_to "Something", "#", class: "navbar-item" %>
+        <hr class="navbar-divider">
+        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+          Elements
         </a>
-        <div class="navbar-dropdown is-boxed">
-          <%= link_to "Something", "#", class: "navbar-item" %>
-          <hr class="navbar-divider">
-          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-            Elements
-          </a>
-          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-            Components
-          </a>
-        </div>
+        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+          Components
+        </a>
       </div>
     </div>
 
@@ -46,13 +37,23 @@
             </a>
           </p>
           <p class="control">
-            <%= link_to "#", class:"button is-primary" do %>
+          <% if user_signed_in? %>
+            <%= link_to destroy_user_session_path, method: :delete, class:"button is-danger" do %>
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span>
+              <span>Sign out</span>
+              </a>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_registration_path, class:"button is-primary" do %>
               <span class="icon">
                 <i class="fa fa-user"></i>
               </span>
               <span>Register</span>
               </a>
             <% end %>
+          <% end %>
           </p>
         </div>
       </div>
