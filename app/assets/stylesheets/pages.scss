@@ -11,26 +11,34 @@
 .retro-link {
   font-family: $family-primary;
   line-height: 2em;
+}
+
+.retro-link:hover{
   color: $red !important;
 }
-.retro-link:before {
+.retro-link:hover:before {
   font-size: 1.5em;
   content: "\f061";
   font-family: FontAwesome;
   padding-right: 15px;
+  -webkit-animation: slide-left 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide-left 0.5s forwards;
+  animation-delay: 2s;
 }
-.retro-link:after {
+.retro-link:hover:after {
   font-size: 1.5em;
   content: "\f060";
   font-family: FontAwesome;
   padding-left: 15px;
 }
 
-@-webkit-keyframes shaker {
-	0% { -webkit-transform: translate(-5px, 0px) rotate(0deg); }
-	25% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
-	50% { -webkit-transform: translate(5px, 0px) rotate(0deg); }
-	75% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
-	100% { -webkit-transform: translate(-5px, 0px) rotate(0deg); }
+
+
+@-webkit-keyframes slide-left {
+    100% { left: 0; }
 }
 
+@keyframes slide-left {
+    100% { left: 0; }
+}
