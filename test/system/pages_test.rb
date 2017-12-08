@@ -4,6 +4,7 @@ class PagesTest < ApplicationSystemTestCase
    test "visiting the index" do
      visit root_url
 
-     assert_selector "h1", text: "Pages#home"
+     assert_selector "a", text: "Start (Register)"
+     assert_selector "a", text: "Continue (Log in)"
    end
 end
