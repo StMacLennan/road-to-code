@@ -24,4 +24,13 @@ class UserRegistrationsTest < ApplicationSystemTestCase
     assert_text "1 error prohibited this user from being saved"
     assert_text "Password is too short"
   end
+
+  test "user registers with blank email" do
+    visit new_user_registration_path
+    fill_in "Email", with: ""
+    fill_in "Password", with: "1234567@"
+    click_button "Sign up"
+    assert_text "1 error prohibited this user from being saved"
+    assert_text "Email can't be blank"
+  end
 end
